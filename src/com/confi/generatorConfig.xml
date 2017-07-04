@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+<classPathEntry
+		location="F://mysql-connector-java-5.1.26-bin.jar" />
+  <context id="context1" >
+  
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/WeChat" 
+    userId="root" password="root" />
+    <javaModelGenerator targetPackage="com.ws.model" targetProject="WeChat" />
+    <sqlMapGenerator targetPackage="com.ws.mapper" targetProject="WeChat" />
+    <javaClientGenerator targetPackage="com.ws.mapper" targetProject="WeChat" type="XMLMAPPER" />
+    <table schema="wechat" tableName="user" >
+      <!-- <columnOverride column="???" property="???" /> -->
+    </table>
+  </context>
+</generatorConfiguration>
