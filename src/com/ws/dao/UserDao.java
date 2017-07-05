@@ -9,7 +9,7 @@ import com.ws.mapper.UserMapper;
 import com.ws.model.User;
 import com.ws.model.UserExample;
 
-@Repository
+
 public class UserDao implements UserMapper{
 	
 	// bean∂‘œÛ 	
