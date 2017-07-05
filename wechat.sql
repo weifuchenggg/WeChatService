@@ -10,10 +10,28 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2017-07-05 21:57:04
+Date: 2017-07-06 00:44:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `friend`
+-- ----------------------------
+DROP TABLE IF EXISTS `friend`;
+CREATE TABLE `friend` (
+  `friendId` int(11) NOT NULL,
+  `myId` int(11) NOT NULL,
+  `friendRemarks` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`myId`,`friendId`),
+  KEY `friendId` (`friendId`),
+  CONSTRAINT `friend_ibfk_1` FOREIGN KEY (`myId`) REFERENCES `user` (`id`),
+  CONSTRAINT `friend_ibfk_2` FOREIGN KEY (`friendId`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of friend
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `user`
