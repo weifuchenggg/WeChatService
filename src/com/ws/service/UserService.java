@@ -3,20 +3,9 @@ package com.ws.service;
 import java.util.List;
 
 
-
-
-
-
-
-
-
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import com.ws.dao.UserDao;
 import com.ws.mapper.UserMapper;
 import com.ws.model.User;
 import com.ws.model.UserExample;
