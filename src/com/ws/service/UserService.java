@@ -3,6 +3,8 @@ package com.ws.service;
 import java.util.List;
 
 
+
+import org.objectweb.asm.xwork.tree.IntInsnNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +18,9 @@ public class UserService implements IUserService {
 
 	@Autowired
 	private UserMapper userMapper;
-	 
 
 	@Override
-	public Boolean login(String userName, String passWord) {
+	public User login(String userName, String passWord) {
 		// TODO Auto-generated method stub
 		UserExample example=new UserExample();
 		Criteria criteria= example.createCriteria();
@@ -27,10 +28,18 @@ public class UserService implements IUserService {
 		criteria.andPasswrodEqualTo(passWord);
 		example.or(criteria);
 		List<User> users=userMapper.selectByExample(example);
-		if(users.size() !=0)
-			System.out.println(users.get(0));
-		if(users.size()!=0) return true;
-		return false;
+		if(users.size()!=0) return users.get(0);
+		return null;
+	}
+
+	@Override
+	public List<User> selectById(int id) {
+		// TODO Auto-generated method stub
+		UserExample example=new UserExample();
+		Criteria criteria=example.createCriteria();
+		criteria.andIdEqualTo(id);
+		example.or(criteria);
+		return userMapper.selectByExample(example);
 	}
 	
 	
