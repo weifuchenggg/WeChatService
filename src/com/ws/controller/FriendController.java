@@ -46,7 +46,8 @@ public class FriendController {
           for(Friend friend: list){
         	  System.out.println(friend);
           }
-          JSONArray jsonArray = JSONArray.fromObject(list );  
-          return new ModelAndView("MyJsp","s",s);
+          JSONArray jsonArray = JSONArray.fromObject(list);  
+          System.out.println(jsonArray.toString());
+          return new ModelAndView("MyJsp","s",jsonArray.toString());
       }
 }
