@@ -10,7 +10,7 @@
     <javaModelGenerator targetPackage="com.ws.model" targetProject="WeChat" />
     <sqlMapGenerator targetPackage="com.ws.mapper" targetProject="WeChat" />
     <javaClientGenerator targetPackage="com.ws.mapper" targetProject="WeChat" type="XMLMAPPER" />
-    <table schema="wechat" tableName="friend" >
+    <table schema="wechat" tableName="addfriendinfo" >
       <!-- <columnOverride column="???" property="???" /> -->
     </table>
   </context>
