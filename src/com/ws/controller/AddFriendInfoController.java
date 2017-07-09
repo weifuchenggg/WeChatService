@@ -71,6 +71,14 @@ public class AddFriendInfoController {
 			return new ModelAndView("MyJsp","s",addfriendinfo);
 	 }
 	  
-	
+	@RequestMapping(value="/ignore")
+	public ModelAndView ignore(int id,Model model, HttpServletRequest request){
+			Addfriendinfo addfriendinfo=addFriendInfoService.selectByPrimaryKey(id);
+			addfriendinfo.setSign(true);
+			addFriendInfoService.updateByPrimaryKey(addfriendinfo);
+			
+			
+			return new ModelAndView("MyJsp","s",addfriendinfo);
+	 }
 	
 }
