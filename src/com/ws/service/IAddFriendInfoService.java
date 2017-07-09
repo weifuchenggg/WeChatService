@@ -6,4 +6,6 @@ import com.ws.model.Addfriendinfo;
 
 public interface IAddFriendInfoService {
 	public List<Addfriendinfo> selectById(int id);
+	public Addfriendinfo selectByPrimaryKey(int id);
+	public void updateByPrimaryKey(Addfriendinfo addfriendinfo);
 }

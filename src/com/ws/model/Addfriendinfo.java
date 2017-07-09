@@ -140,4 +140,11 @@ public class Addfriendinfo {
 	public void setFriendname(String friendname) {
 		this.friendname = friendname;
 	}
+
+	@Override
+	public String toString() {
+		return "Addfriendinfo [id=" + id + ", myid=" + myid + ", friendid="
+				+ friendid + ", message=" + message + ", sign=" + sign
+				+ ", friendname=" + friendname + "]";
+	}
 }

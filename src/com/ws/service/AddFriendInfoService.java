@@ -28,4 +28,16 @@ public class AddFriendInfoService implements IAddFriendInfoService{
 		return addfriendinfoMapper.selectByExample(example);
 	}
 
+	@Override
+	public Addfriendinfo selectByPrimaryKey(int id) {
+		// TODO Auto-generated method stub
+		return addfriendinfoMapper.selectByPrimaryKey(id);
+	}
+
+	@Override
+	public void updateByPrimaryKey(Addfriendinfo addfriendinfo) {
+		// TODO Auto-generated method stub
+		addfriendinfoMapper.updateByPrimaryKey(addfriendinfo);
+	}
+
 }

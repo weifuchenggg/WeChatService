@@ -25,5 +25,16 @@ public class FriendService implements IFriendService {
 		example.or(criteria);
 		return friendMapper.selectByExample(example);
 	}
+
+	@Override
+	public void insert(Friend friend) {
+		// TODO Auto-generated method stub
+		try {
+			friendMapper.insert(friend);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+	
 	
 }
